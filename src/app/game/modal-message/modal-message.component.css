@@ -1,0 +1,23 @@
+.modal-text {
+  color: var(--color-tone-7);
+  font-weight: 600;
+  margin: auto;
+  text-align: center;
+}
+
+.modal-btn {
+  margin: 0.5rem;
+
+  font-weight: 600;
+  background-color: var(--correct-color-tone);
+  padding: 0.2rem 0.5rem;
+  border-radius: 15px;
+  border: none;
+}
+sup {
+  color: var(--color-tone-7);
+}
+
+.modal-btns {
+  text-align: center;
+}

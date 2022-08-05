@@ -1,0 +1,10 @@
+<nav>
+  <h1>WORDLE</h1>
+</nav>
+<main>
+  <app-board [board]="board" [boardTiles]="boardTiles"></app-board>
+  <app-keyboard
+    (keyEmitter)="handleKey($event)"
+    [keyColors]="keyColors"
+  ></app-keyboard>
+</main>

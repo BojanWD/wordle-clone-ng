@@ -1,0 +1,13 @@
+<div>
+  <p class="modal-text">{{ message }}</p>
+  <div
+    *ngIf="
+      message.startsWith('Well played') ||
+      message.startsWith('Unfortunately, you lose.')
+    "
+    class="modal-btns"
+  >
+    <button class="modal-btn" (click)="refreshPage()">Play again</button>
+    <button class="modal-btn" (click)="onClose()">Close</button>
+  </div>
+</div>

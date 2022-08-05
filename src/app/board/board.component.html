@@ -1,0 +1,17 @@
+<section class="board-container">
+  <div class="board">
+    <div class="row" *ngFor="let row of board; let ir = index">
+      <div
+        [ngClass]="{
+          tile: true,
+          correct: boardTiles[ir][it] === 'correct',
+          present: boardTiles[ir][it] === 'present',
+          'not-present': boardTiles[ir][it] === 'not-present'
+        }"
+        *ngFor="let col of row; let it = index"
+      >
+        {{ col }}
+      </div>
+    </div>
+  </div>
+</section>

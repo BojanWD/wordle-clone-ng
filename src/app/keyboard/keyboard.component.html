@@ -1,0 +1,48 @@
+<section class="keyboard">
+  <div class="keyboard-row">
+    <div
+      [ngClass]="{
+        key: true,
+        correct: keyColors[key.toLowerCase()] === 'correct',
+        present: keyColors[key.toLowerCase()] === 'present',
+        'not-present': keyColors[key.toLowerCase()] === 'not-present'
+      }"
+      *ngFor="let key of topRowKeys"
+      (click)="emitKey(key)"
+    >
+      {{ key }}
+    </div>
+  </div>
+  <div class="keyboard-row">
+    <div class="key-half"></div>
+    <div
+      [ngClass]="{
+        key: true,
+        correct: keyColors[key.toLowerCase()] === 'correct',
+        present: keyColors[key.toLowerCase()] === 'present',
+        'not-present': keyColors[key.toLowerCase()] === 'not-present'
+      }"
+      *ngFor="let key of middleRowKeys"
+      (click)="emitKey(key)"
+    >
+      {{ key }}
+    </div>
+    <div class="key-half"></div>
+  </div>
+  <div class="keyboard-row">
+    <div class="enter-backspace key" (click)="emitKey('Enter')">Enter</div>
+    <div
+      [ngClass]="{
+        key: true,
+        correct: keyColors[key.toLowerCase()] === 'correct',
+        present: keyColors[key.toLowerCase()] === 'present',
+        'not-present': keyColors[key.toLowerCase()] === 'not-present'
+      }"
+      *ngFor="let key of bottomRowKeys"
+      (click)="emitKey(key)"
+    >
+      {{ key }}
+    </div>
+    <div class="enter-backspace key" (click)="emitKey('Backspace')">Bckspc</div>
+  </div>
+</section>
